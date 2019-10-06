@@ -1,4 +1,8 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render
+from django.urls import reverse
+from django.views import generic
 
-def index(request):
-    return HttpResponse("MKS-GLASS, Проектирование, производство и установка перегородок из алюминия и стали")
+
+def post_list(request):
+    return render(request, 'maintheme/index.html', {})

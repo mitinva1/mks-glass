@@ -2,6 +2,7 @@ from django.urls import path
 
 from . import views
 
+app_name = 'maintheme'
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.post_list, name='index'),
               ]
