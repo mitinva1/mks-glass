@@ -1,0 +1,15 @@
+h1 {
+    color: DarkSlateGray;
+}
+h3 {
+    color: DarkSlateGray;
+}
+a {
+    color: SteelBlue;
+}
+body {
+    background: white url("images/wallp.jpg") no-repeat right bottom;
+}
+article {
+    display: block;
+} 
