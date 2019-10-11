@@ -1,22 +1,29 @@
 {% load staticfiles %}
+{% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'maintheme/style.css' %}" />
+
 <!doctype html>
 <html>
     <head>
-        <meta charset="utf-8">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" type="text/css" href="{% static 'maintheme/style.css' %}" />
+        <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
         <title>MKS-GLASS</title>
-        <h1>Проектирование, производство и установка перегородок из алюминия и стали.</h1>
-        <p>г. Воронеж.</p>
-        <p>тел.: +7 (952) 102 12 21 </p>
-        <base target="_blank">
-        <base href="https://instagram.com/">
+       
+        <p>г. Воронеж.<br>
+        &#9990; тел.: +7 (952) 102 12 21<br>
+        &#9993; mks-glass@mail.ru<br>
+        <a href="m.k.s.glass/">instagram</a><a href="https://vk.com/mks.glass">, vk</a><br>
+        <h1 id = head1>Проектирование, производство и установка перегородок из алюминия и стали.</h1>
+
     </head>
     <body>
-        <p><a href="m.k.s.glass/">instagram</a><a href="https://vk.com/mks.glass">, vk</a></p>
+    
         <article>
         <h3>Перегородки в стиле Loft</h3>
-        <p>
+        <p id = loft>
+            <img src="/media/loft12.png"><br>
             Проектирование, изготовление и установка loft перегородок.<br>
             Материал для перегородок - сталь. Материал перегородок для<br>
             ванных комнат и душевых - нержавеющая сталь.<br>
@@ -29,7 +36,7 @@
         <h3>
             Остекление террас и беседок
         </h3>
-        <p>
+        <p id = terrassa>
             Остекление террас и беседок является замечательным вариантом<br>
             защиты людей от неблагоприятных погодных условий, а также<br>
             проведения приятного вечера на природе, обеспечивающей ощущение<br>
@@ -60,12 +67,12 @@
             Преимущества работы с нами
         </h3>
         <p>
-            - собственное производство конструкций<br>
-            - большой опыт работы с уникальными проектами<br>
-            - проектирование и применение нестандартных решений<br>
-            - внимательное отношение к деталям и мелочам<br>
-            - Клиенториентированность. Индивидуальный подход к каждому заказу<br>
-            - команда профессионалов с большим опытом работы
+            &bull; собственное производство конструкций<br>
+            &bull; большой опыт работы с уникальными проектами<br>
+            &bull; проектирование и применение нестандартных решений<br>
+            &bull; внимательное отношение к деталям и мелочам<br>
+            &bull; Клиенториентированность. Индивидуальный подход к каждому заказу<br>
+            &bull; команда профессионалов с большим опытом работы
         </p>
     </body>
 </html>

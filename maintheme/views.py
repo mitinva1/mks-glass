@@ -4,5 +4,6 @@ from django.urls import reverse
 from django.views import generic
 
 
+
 def post_list(request):
     return render(request, 'maintheme/index.html', {})
