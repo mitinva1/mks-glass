@@ -17,8 +17,11 @@ body {
 article {
     display: block;
 } 
-
-
+#head1 {
+  font-size: 48px;
+  background:  rgb(87, 112, 112);
+  color:white;
+}
 #loft {
     position: left;
     left: 3px;
