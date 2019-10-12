@@ -1,6 +1,8 @@
 h1 {
-    color: DarkSlateGray;
-    image url("images/bmw.jpg");
+  font-size: 48px;
+  background:  rgb(56, 68, 68);
+  text-align: center;
+  color:white;
 }
 h3 {
     color: DarkSlateGray;
@@ -16,12 +18,7 @@ article {
     display: block;
 } 
 
-#head1 {
-  font-size: 48px;
-  background:  rgb(56, 68, 68);
-  text-align: center;
-  color:white;
-} 
+
 #loft {
     position: left;
     left: 3px;
