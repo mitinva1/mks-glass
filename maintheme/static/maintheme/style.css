@@ -1,17 +1,17 @@
 h1 {
   font-size: 48px;
-  background:  rgb(56, 68, 68);
+  /* #background:  rgb(56, 68, 68); */
   text-align: center;
   color:white;
 }
 h3 {
-    color: DarkSlateGray;
+    color: #2f4f4f;
 }
 a {
     color: SteelBlue;
 }
 body {
-    background:  url("images/wallp.jpg");
+    background:  url("images/wallp2.jpg");
     /* #background-color: white; */
 }
 article {
@@ -19,8 +19,10 @@ article {
 } 
 #head1 {
   font-size: 48px;
-  background:  rgb(87, 112, 112);
-  color:white;
+  /* background:  rgb(87, 112, 112); */
+  background-image: url('images/loft-35.png');
+  color:rgb(234, 247, 247);
+  text-shadow: 1px 1px 20px rgb(124, 183, 194);
 }
 #loft {
     position: left;
