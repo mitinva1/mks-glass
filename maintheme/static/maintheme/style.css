@@ -1,5 +1,5 @@
 h1 {
-  font-size: 48px;
+  font-size: 40px;
   /* #background:  rgb(56, 68, 68); */
   text-align: center;
   color:white;
@@ -18,9 +18,11 @@ article {
     display: block;
 } 
 #head1 {
-  font-size: 48px;
+  font-size: 36px;
   /* background:  rgb(87, 112, 112); */
   background-image: url('images/loft-35.png');
+  /* background-repeat: repeat; */
+  /* background-position: center; */
   color:rgb(234, 247, 247);
   text-shadow: 1px 1px 20px rgb(124, 183, 194);
 }
