@@ -11,19 +11,19 @@ a {
     color: SteelBlue;
 }
 body {
-    background:  url("images/wallp2.jpg");
-    /* #background-color: white; */
+    /* background:  url("images/wallp2.jpg"); */
+    background-color: white;
 }
 article {
     display: block;
 } 
 #head1 {
-  font-size: 36px;
-  /* background:  rgb(87, 112, 112); */
-  background-image: url('images/loft-35.png');
+  font-size: 30px;
+  background:  rgb(226, 230, 230);
+  /* background-image: url('images/loft-35.png'); */
   /* background-repeat: repeat; */
-  /* background-position: center; */
-  color:rgb(234, 247, 247);
+  background-position: center;
+  color:rgb(17, 17, 17);
   text-shadow: 1px 1px 20px rgb(124, 183, 194);
 }
 #loft {
