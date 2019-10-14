@@ -24,14 +24,18 @@ article {
   /* background-repeat: repeat; */
   background-position: center;
   color:rgb(17, 17, 17);
-  text-shadow: 1px 1px 20px rgb(124, 183, 194);
+  text-shadow: 1px 1px 20px rgb(226, 232, 233);
 }
 #loft {
-    /* width: 900px; */
-    font-size: 19px;
+    /* width: 480px;
+    height: 510px; */
+    font-size: 14px;
+    /* height: 100px; */
+    /* background-color: rgb(245, 245, 245); */
+    padding: 5px;
     display: inline-block;
-    position: static;
-    left: 3px;
+    /* position: relative; */
+    left: 10px;
     text-align: left;
   }
 #sss{
@@ -45,7 +49,32 @@ article {
     left: 10px;
     text-align: left;
   }
-  img { 
-    float: left;
+  /* img { 
+    float: top;
     margin: 0 10px 10px 0;
-  }
+  } */
+  ul {
+    font: 14px Verdana, Geneva, sans-serif;
+    text-align: center;
+    margin: 0px 0 10px;
+}
+    ul:after {
+            /* content: ' i i i i i i i i '; */
+            word-spacing: 93px;
+            padding-left: 93px;
+            /* visibility: hidden; Скрыл это свойство, ради демонстрации процесса */
+    }
+            ul li {
+
+                    display : inline-block;
+                    width : 450px;
+                    height: 510px;
+                    margin: 10px 0 5px;
+                    background: rgb(233, 233, 233);
+                    vertical-align: top;
+                    text-align: center;
+
+                    /* эмуляция inline-block для IE6-7*/
+                    /* display : inline; */
+                    /* zoom : 1; */
+            }
