@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'maintheme',
+    'gallery',
     "django_http2_push",#my
+    'django.contrib.sites'
 ]
 
 MIDDLEWARE = [
@@ -50,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "django_http2_push.middleware.PushHttp2Middleware",#my
+    
 ]
 
 ROOT_URLCONF = 'mksglass.urls'

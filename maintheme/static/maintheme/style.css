@@ -42,7 +42,9 @@ article {
     { width: 250px; }
       img { float: left; }
 }
-  
+p{
+  padding-left: 40px;
+}  
 
   #terrassa{
     position: right;
@@ -53,28 +55,63 @@ article {
     float: top;
     margin: 0 10px 10px 0;
   } */
-  ul {
+  /* ul {
     font: 14px Verdana, Geneva, sans-serif;
     text-align: center;
     margin: 0px 0 10px;
-}
-    ul:after {
-            /* content: ' i i i i i i i i '; */
-            word-spacing: 93px;
-            padding-left: 93px;
+} */
+#bb:after {
+  /* content: ' i i i i i i i i '; */
+  word-spacing: 93px;
+  list-style-type: alpha;
+  padding: 10px;
+  margin: 1px;
+  
             /* visibility: hidden; Скрыл это свойство, ради демонстрации процесса */
-    }
-            ul li {
+}
+#bb li {
 
-                    display : inline-block;
-                    width : 450px;
-                    height: 510px;
-                    margin: 10px 0 5px;
-                    background: rgb(233, 233, 233);
-                    vertical-align: top;
-                    text-align: center;
-
-                    /* эмуляция inline-block для IE6-7*/
-                    /* display : inline; */
-                    /* zoom : 1; */
+  display : inline-block;
+  width : 400px;
+  height: 510px;
+  background: rgb(233, 233, 233);
+  vertical-align: top;
+  text-align: center;
+/* эмуляция inline-block для IE6-7*/
+/* display : inline; */
+ /* zoom : 1; */
             }
+            #navbar ul {
+              display: none;
+              background-color: #f90;
+              position: absolute;
+              top: 100%;
+            }
+            #navbar li:hover ul { display: block; }
+            #navbar, #navbar ul {
+              margin: 0;
+              padding: 0;
+              list-style-type: none;
+            }
+            #navbar {
+              height: 30px;
+              background-color: #666;
+              padding-left: 25px;
+              min-width: 470px;
+            }
+            #navbar li {
+              float: left;
+              position: relative;
+              height: 100%;
+            }
+            #navbar li a {
+              display: block;
+              padding: 6px;
+              width: 100px;
+              color: #fff;
+              text-decoration: none;
+              text-align: center;
+            }
+            #navbar ul li { float: none; }
+            #navbar li:hover { background-color: #f90; }
+            #navbar ul li:hover { background-color: #666; }
