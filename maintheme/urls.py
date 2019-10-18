@@ -6,7 +6,8 @@ from . import views
 
 app_name = 'maintheme'
 urlpatterns = [
-    path('', views.post_list, name='index'),
+    path('', views.maintheme_list, name='index'),
+    path('contacts/', views.contacts, name='contacts'),
               ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

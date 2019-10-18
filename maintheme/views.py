@@ -5,5 +5,7 @@ from django.views import generic
 
 
 
-def post_list(request):
+def maintheme_list(request):
     return render(request, 'maintheme/index.html', {})
+def contacts(request):
+    return render(request, 'maintheme/contacts.html', {})
