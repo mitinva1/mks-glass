@@ -6,6 +6,8 @@ from .models import Post
 from django.utils import timezone
 
 
+from .models import Post
+
 def maintheme_list(request):
     return render(request, 'maintheme/index.html', {})
 def contacts(request):

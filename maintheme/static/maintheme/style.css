@@ -4,19 +4,10 @@ h1 {
   text-align: center;
   color:white;
 }
-h3 {
-    color: #2f4f4f;
-}
-a {
-    color: SteelBlue;
-}
-body {
-    /* background:  url("images/wallp2.jpg"); */
-    background-color: white;
-}
-article {
-    display: block;
-} 
+h3 {color: #2f4f4f;}
+a {color: SteelBlue;}
+body {background-color: white;}
+article {display: block;} 
 #head1 {
   font-size: 30px;
   background:  rgb(226, 230, 230);
@@ -38,23 +29,18 @@ article {
     left: 10px;
     text-align: left;
   }
-#sss{
-    { width: 250px; }
-      img { float: left; }
+  div { width: px; }
+p{padding-left: 40px;}  
+#news img { 
+  float: left;
+  margin: 0 10px 10px 0;
 }
-p{
-  padding-left: 40px;
-}  
-
   #terrassa{
     position: right;
     left: 10px;
     text-align: left;
   }
-  /* img { 
-    float: top;
-    margin: 0 10px 10px 0;
-  } */
+
   /* ul {
     font: 14px Verdana, Geneva, sans-serif;
     text-align: center;

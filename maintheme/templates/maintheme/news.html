@@ -32,12 +32,18 @@
             <li><a href="#">О нас</a></li>
 
     </ul>
+ 
     {% for post in posts.reverse %}
-    <div>
         <p>published: {{ post.published_date }}</p>
+        <!-- {{ article.title }} -->
+        
         <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
+        
+        <p id='news'>
+            <img src="{{ post.img.url }}">
+            {{ post.text|linebreaksbr }}
+        </p>
+    
 {% endfor %}    
 
     
