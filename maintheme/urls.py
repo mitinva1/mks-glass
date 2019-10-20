@@ -8,6 +8,7 @@ app_name = 'maintheme'
 urlpatterns = [
     path('', views.maintheme_list, name='index'),
     path('contacts/', views.contacts, name='contacts'),
+    path('news/', views.post, name='news'),
               ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

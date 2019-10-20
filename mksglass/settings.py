@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'maintheme',
+    'maintheme.apps.MainthemeConfig',
+    # 'maintheme',
     'gallery',
     "django_http2_push",#my
     'django.contrib.sites'
@@ -51,8 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "django_http2_push.middleware.PushHttp2Middleware",#my
-    
+    "django_http2_push.middleware.PushHttp2Middleware",#my 
 ]
 
 ROOT_URLCONF = 'mksglass.urls'
@@ -118,6 +118,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+SITE_ID = 2
 
 
 # Static files (CSS, JavaScript, Images)
