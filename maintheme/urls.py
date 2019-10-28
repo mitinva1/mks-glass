@@ -9,6 +9,7 @@ urlpatterns = [
     path('', views.maintheme_list, name='index'),
     path('contacts/', views.contacts, name='contacts'),
     path('news/', views.post, name='news'),
+    path('gallery/', views.gallery, name='gallery'),
     
    
               ]

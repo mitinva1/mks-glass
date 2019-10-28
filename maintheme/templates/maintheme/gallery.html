@@ -1,0 +1,89 @@
+{% load staticfiles %}
+{% load static %}
+
+
+<!doctype html>
+<html>
+        
+    <head>
+        
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" type="text/css" href="{% static 'maintheme/style.css' %}" />
+        <meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1.0" charset="utf-8">
+        <meta name="description" content="лофт перегородки">
+        <title>MKS-GLASS</title>
+        <div>
+        <p>г. Воронеж.<br>
+        &#9990; тел.: +7 (952) 102 12 21, +7 (905) 050 65 31. <br>
+        &#9993; mks-glass@mail.ru<br>
+        <a href="https://www.instagram.com/m.k.s.glass/">instagram</a><a href="https://vk.com/mks.glass">, vk</a><br>
+        </div>
+        <div>
+        <h1 id = head1>Проектирование, производство и установка перегородок из алюминия и стали.</h1>
+        </div>
+    </head>
+    
+    <body>
+        <!-- MENU -->
+        <div>
+        <ul id="navbar">
+                <li><a href="../">Главная</a></li>
+                <li><a href=".">Портфолио</a></li>
+                <li><a href="../news">Новости</a></li>
+                <li><a href="../contacts">Контакты</a></li>
+                <li><a href="#">О нас</a></li>
+        </ul>
+        </div>
+        <h3>Осекление таррас из алюминия и ПВХ</h3>
+        <div>   
+        <ul id="gallery">
+                {% for photo in photos.reverse %}
+                <li> {{ photo.photo_text}}<br>
+                    <img src="{{ photo.img.url }}", height="300", width="300">
+                </li>
+                {% endfor %}  
+            </ul>
+        </div>
+        <h3>Безрамное остекление, стеклянные ограждения</h3>
+        <div>
+            <ul id="gallery">
+                {% for photoframeless in photoframeless.reverse %}
+                <li> {{ photoframeless.PhotoFrameless_text}}<br>
+                    <img src="{{ photoframeless.img.url }}", height="300", >
+                </li>
+                {% endfor %}  
+            </ul>
+        </div>
+        <h3>Въездныее ворота, калитки, автоматика</h3>
+        <div>
+            <ul id="gallery">
+                {% for x in gates.reverse %}
+                <li> {{ x.gate_text}}<br>
+                    <img src="{{ x.img.url }}", height="300", width="300">
+                </li>
+                {% endfor %}  
+            </ul>
+        </div>
+        <h3>Окна ПВХ, входные группы лоджии</h3>
+        <div>
+            <ul id="gallery">
+                {% for d in pvcs.reverse %}
+                <li> {{ d.Pvc_text}}<br>
+                    <img src="{{ d.img.url }}", height="300", width="300">
+                </li>
+                {% endfor %}  
+            </ul>
+        </div>
+        <h3>Металлоконструкции, лестницы, стеллажи</h3>
+        <div>
+            <ul id="gallery">
+                {% for c in metalls.reverse %}
+                <li> {{ c.metall_text}}<br>
+                    <img src="{{ c.img.url }}", height="300", width="300">
+                </li>
+                {% endfor %}  
+            </ul>
+        </div>
+    </body>
+</html>

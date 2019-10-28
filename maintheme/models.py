@@ -22,10 +22,48 @@ class Post(models.Model):
         return self.title
 
 class Photo(models.Model):
-    photo_text = models.CharField(max_length=200)
+    photo_text = models.CharField(max_length=35)
     pub_date = models.DateTimeField('date published')
+    img = models.ImageField(upload_to='media/img/gallery/',
+                       verbose_name='грузи картинку', null = True, blank = True)
     def __str__(self):
         return self.photo_text
+    def was_published_recently(self):
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+class PhotoFrameless(models.Model):
+    PhotoFrameless_text = models.CharField(max_length=35)
+    pub_date = models.DateTimeField('date published')
+    img = models.ImageField(upload_to='media/img/gallery/',
+                       verbose_name='грузи картинку', null = True, blank = True)
+    def __str__(self):
+        return self.PhotoFrameless_text
+    def was_published_recently(self):
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+class Gate(models.Model):
+    gate_text = models.CharField(max_length=35)
+    pub_date = models.DateTimeField('date published')
+    img = models.ImageField(upload_to='media/img/gallery/',
+                       verbose_name='грузи картинку', null = True, blank = True)
+    def __str__(self):
+        return self.gate_text
+    def was_published_recently(self):
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+class Pvc(models.Model):
+    Pvc_text = models.CharField(max_length=35)
+    pub_date = models.DateTimeField('date published')
+    img = models.ImageField(upload_to='media/img/gallery/',
+                       verbose_name='грузи картинку', null = True, blank = True)
+    def __str__(self):
+        return self.Pvc_text
+    def was_published_recently(self):
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+class Metall(models.Model):
+    metall_text = models.CharField(max_length=35)
+    pub_date = models.DateTimeField('date published')
+    img = models.ImageField(upload_to='media/img/gallery/',
+                       verbose_name='грузи картинку', null = True, blank = True)
+    def __str__(self):
+        return self.metall_text
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 

@@ -101,3 +101,23 @@ p{padding-left: 40px;}
             #navbar ul li { float: none; }
             #navbar li:hover { background-color: #f90; }
             #navbar ul li:hover { background-color: #666; }
+/* gallery start */
+#gallery:after {
+  /* content: ' i i i i i i i i '; */
+  word-spacing: 93px;
+  list-style-type: alpha;
+  padding: 10px;
+  margin: 1px;
+  
+            /* visibility: hidden; Скрыл это свойство, ради демонстрации процесса */
+}
+#gallery li {
+
+  display : inline-block;
+  width : 310px;
+  /* height: 510px; */
+  background: rgb(233, 233, 233);
+  vertical-align: top;
+  text-align: center;
+}
+/* gallery end */
