@@ -3,13 +3,14 @@ from django.contrib.sites.models import Site#my
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 class Post(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='автор')
+    title = models.CharField(max_length=200, verbose_name='название поста')
     text = models.TextField()
-    created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
+    created_date = models.DateTimeField(default=timezone.now, verbose_name='дата создания')
+    published_date = models.DateTimeField(blank=True, null=True, verbose_name='дата убликации')
     img = models.ImageField(upload_to='media/img/', 
                        verbose_name='Грузи епт', null = True, blank = True)
                        
@@ -22,46 +23,56 @@ class Post(models.Model):
         return self.title
 
 class Photo(models.Model):
-    photo_text = models.CharField(max_length=35)
-    pub_date = models.DateTimeField('date published')
+    photo_text = models.CharField(max_length=35, verbose_name='название')
+    pub_date = models.DateTimeField('Дата публикации')
     img = models.ImageField(upload_to='media/img/gallery/',
-                       verbose_name='грузи картинку', null = True, blank = True)
+                       verbose_name='Загрузка фото', null = True, blank = True)
+    author = models.ForeignKey(User,on_delete=models.CASCADE,
+                               related_name='photo_posts', verbose_name='автор')
     def __str__(self):
         return self.photo_text
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 class PhotoFrameless(models.Model):
-    PhotoFrameless_text = models.CharField(max_length=35)
-    pub_date = models.DateTimeField('date published')
+    PhotoFrameless_text = models.CharField(max_length=35, verbose_name='название')
+    pub_date = models.DateTimeField('Дата публикации')
     img = models.ImageField(upload_to='media/img/gallery/',
-                       verbose_name='грузи картинку', null = True, blank = True)
+                       verbose_name='Загрузка фото', null = True, blank = True)
+    author = models.ForeignKey(User,on_delete=models.CASCADE,
+                               related_name='frameless_posts', verbose_name='автор')
     def __str__(self):
         return self.PhotoFrameless_text
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 class Gate(models.Model):
-    gate_text = models.CharField(max_length=35)
-    pub_date = models.DateTimeField('date published')
+    gate_text = models.CharField(max_length=35, verbose_name='название')
+    pub_date = models.DateTimeField('Дата публикации')
     img = models.ImageField(upload_to='media/img/gallery/',
-                       verbose_name='грузи картинку', null = True, blank = True)
+                       verbose_name='Загрузка фото', null = True, blank = True)
+    author = models.ForeignKey(User,on_delete=models.CASCADE,
+                               related_name='blog_posts', verbose_name='автор')
     def __str__(self):
         return self.gate_text
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 class Pvc(models.Model):
-    Pvc_text = models.CharField(max_length=35)
-    pub_date = models.DateTimeField('date published')
+    Pvc_text = models.CharField(max_length=35, verbose_name='название')
+    pub_date = models.DateTimeField('Дата публикации')
     img = models.ImageField(upload_to='media/img/gallery/',
-                       verbose_name='грузи картинку', null = True, blank = True)
+                       verbose_name='Загрузка фото', null = True, blank = True)
+    author = models.ForeignKey(User,on_delete=models.CASCADE,
+                               related_name='pvc_posts', verbose_name='автор')
     def __str__(self):
         return self.Pvc_text
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 class Metall(models.Model):
-    metall_text = models.CharField(max_length=35)
-    pub_date = models.DateTimeField('date published')
+    metall_text = models.CharField(max_length=35, verbose_name='название')
+    pub_date = models.DateTimeField('Дата публикации')
     img = models.ImageField(upload_to='media/img/gallery/',
-                       verbose_name='грузи картинку', null = True, blank = True)
+                       verbose_name='Загрузка фото', null = True, blank = True)
+    author = models.ForeignKey(User,on_delete=models.CASCADE,
+                               related_name='metall_posts', verbose_name='автор')
     def __str__(self):
         return self.metall_text
     def was_published_recently(self):

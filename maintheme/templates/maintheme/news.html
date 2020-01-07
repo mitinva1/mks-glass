@@ -33,20 +33,23 @@
 
     </ul>
  
-    {% for post in posts.reverse %}
-        <p>published: {{ post.published_date }}</p>
-        <!-- {{ article.title }} -->
-        
-        <h1><a href="">{{ post.title }}</a></h1>
-        
-        <p id='news'>
-            <img src="{{ post.img.url }}">
-            {{ post.text|linebreaksbr }}
-        </p>
     
+{% for post in posts.reverse %}
+  <div class="date">
+    <p class="info">опубликовано: {{ post.published_date }}</p>
+  </div>
+    <!-- {{ article.title }} -->  
+    <h1><a href="">{{ post.title }}</a></h1>
+  <div>
+    <p id='news'>
+      <img src="{{ post.img.url }}">
+      {{ post.text|linebreaksbr }}
+    </p>
+  </div>   
 {% endfor %}    
 
     
 
   </body>
 </html>
+
