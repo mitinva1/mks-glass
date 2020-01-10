@@ -1,0 +1,23 @@
+{% extends "maintheme/base.html" %}
+
+{% block content %}
+<!-- {% load staticfiles %}
+{% load static %} -->
+
+
+    
+{% for post in posts.reverse %}
+  <div class="date">
+    <p class="info">опубликовано: {{ post.published_date }}</p>
+  </div>
+    <!-- {{ article.title }} -->  
+    <h1><a href="">{{ post.title }}</a></h1>
+  <div>
+    <p id='news'>
+      <img src="{{ post.img.url }}">
+      {{ post.text|linebreaksbr }}
+    </p>
+  </div>   
+{% endfor %}    
+
+{% endblock %}

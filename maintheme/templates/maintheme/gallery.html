@@ -1,31 +1,7 @@
-{% load staticfiles %}
-{% load static %}
+{% extends "base.html" %}
 
+{% block content %}
 
-<!doctype html>
-<html>
-        
-    <head>
-        
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-            <link rel="stylesheet" type="text/css" href="{% static 'maintheme/style.css' %}" />
-        <meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1.0" charset="utf-8">
-        <meta name="description" content="лофт перегородки">
-        <title>MKS-GLASS</title>
-        <div>
-        <p>г. Воронеж.<br>
-        &#9990; тел.: +7 (952) 102 12 21, +7 (905) 050 65 31. <br>
-        &#9993; mks-glass@mail.ru<br>
-        <a href="https://www.instagram.com/m.k.s.glass/">instagram</a><a href="https://vk.com/mks.glass">, vk</a><br>
-        </div>
-        <div>
-        <h1 id = head1>Проектирование, производство и установка перегородок из алюминия и стали.</h1>
-        </div>
-    </head>
-    
-    <body>
-        <!-- MENU -->
         <div>
         <ul id="navbar">
                 <li><a href="../">Главная</a></li>
@@ -85,5 +61,4 @@
                 {% endfor %}  
             </ul>
         </div>
-    </body>
-</html>
+{% endblock %}

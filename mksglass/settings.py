@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     # 'maintheme',
     'gallery',
     "django_http2_push",#my
-    'django.contrib.sites'
+    'django.contrib.sites',
 ]
 
 MIDDLEWARE = [
