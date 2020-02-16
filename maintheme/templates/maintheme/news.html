@@ -2,16 +2,16 @@
 
 
 {% block content %}
-<!-- {% load staticfiles %}
-{% load static %} -->
-<ul id="navbar">
-  <li><a href="../">Главная</a></li>
-  <li><a href="../gallery">Портфолио</a></li>
-  <li><a href=".">Новости</a></li>
-  <li><a href="../contacts">Контакты</a></li>
-  <li><a href="#">О нас</a></li>
 
-</ul>
+
+<!-- <ul id="navbar">
+  <li><a href="{% url 'maintheme:index' %}">Главная</a></li>
+  <li><a href="{% url 'maintheme:gallery' %}">Портфолио</a></li>
+  <li><a href="{% url 'maintheme:news' %}">Новости</a></li>
+  <li><a href="{% url 'maintheme:contacts' %}">Контакты</a></li>
+  <li><a href="{% url 'maintheme:index' %}">О нас</a></li>
+
+</ul> -->
 
     
 {% for post in posts.reverse %}
@@ -22,7 +22,7 @@
     <!-- {{ article.title }} -->  
     <h1><a href="">{{ post.title }}</a></h1>
   
-    <p id='news'> <img src="{{ post.img.url }}">{{ post.text|linebreaksbr }}</p>
+    <p > <img src="{{ post.img.url }}">{{ post.text|linebreaksbr }}</p>
   </div>
   </div>   
 {% endfor %}    
