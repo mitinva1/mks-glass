@@ -5,33 +5,49 @@
 <html>
 <head>
     <title>MKS-GLASS</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
+    <meta charset="UTF-8">
     <link href="{% static "maintheme/style.css" %}" rel="stylesheet">
-    <meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1.0" charset="utf-8">
-    <meta name="description" content="лофт перегородки">
-<div id="head11">
-    <p>г. Воронеж, Большая манежная д.13в.<br>
-    &#9990; тел.: +7 (952) 102 12 21, +7 (905) 050 65 31. <br>
-    &#9993; mks-glass@mail.ru<br>
-    <a href="https://www.instagram.com/m.k.s.glass/">instagram</a><a href="https://vk.com/mks.glass">, vk</a><br></p>
-</div>
-<div id = head12>
-    <h1 id = head1>Проектирование, производство и установка изделий из алюминия и стали.</h1>
-    <ul id="navbar">
-        <li><a href="{% url 'maintheme:index' %}">Главная</a></li>
-        <li><a href="{% url 'maintheme:gallery' %}">Портфолио</a></li>
-        <li><a href="{% url 'maintheme:news' %}">Новости</a></li>
-        <li><a href="{% url 'maintheme:contacts' %}">Контакты</a></li>
-        <li><a href="{% url 'maintheme:index' %}">О нас</a></li>
-      
-      </ul>
-</div>
+    <meta name="viewport" content="лофт перегородки, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d907e42274.js" crossorigin="anonymous"></script>
+
+    
 </head>
 
 <body>
-
-   
+    <header>
+        <nav>
+            <input type="checkbox" id="checkbox-menu">
+            <label for="checkbox-menu">
+                <ul class="menu touch">
+                    <li><a class="logo" href="#">M.K.S</a></li>
+                    <li><a href="{% url 'maintheme:index' %}">Главная</a></li>
+                    <li><a href="{% url 'maintheme:gallery' %}">Портфолио</a></li>
+                    <li><a href="{% url 'maintheme:news' %}">Новости</a></li>
+                    <li><a href="{% url 'maintheme:contacts' %}">Контакты</a></li>
+                    <li><a href="{% url 'maintheme:index' %}">О нас</a></li>
+                    
+                </ul>
+                <span class="toggle">☰</span>
+            </label>
+        </nav>
+    </header>
+    <main>
+        <section class="intro wrapper">
+            <div class="intro-img">
+                <p class="intro-text">Проектирование,<br>
+                    производство и<br>
+                    установка изделий<br>
+                     из алюминия и стали.</p>
+            </div>
+            <div class="intro-contacts">
+                <p><i class="fas fa-phone-alt"></i>7(952)1021221</p>
+                <p><i class="fas fa-map-marker-alt"></i>г. Воронеж</p>
+            </div>
+            
+        </section>
+    </main>
 
  <div id="date">
  {% block content %}{% endblock %}

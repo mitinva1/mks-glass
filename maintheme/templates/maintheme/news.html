@@ -15,14 +15,16 @@
 
     
 {% for post in posts.reverse %}
-<div class="wrapper">
+
+<div class="wrapperer">
+
   <div class="item">
     <p></p>опубликовано: {{ post.published_date }}</p>
   
     <!-- {{ article.title }} -->  
-    <h1><a href="">{{ post.title }}</a></h1>
+    <p class="h1-text">{{ post.title }}</p>
   
-    <p > <img src="{{ post.img.url }}">{{ post.text|linebreaksbr }}</p>
+    <p  class="main">  <img class="main-img" src="{{ post.img.url }}">{{ post.text|linebreaksbr }}</p>
   </div>
   </div>   
 {% endfor %}    

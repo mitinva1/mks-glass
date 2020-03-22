@@ -1,3 +1,266 @@
+*{
+  
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+body, html{
+  overflow-x: hidden;
+  
+}
+nav{
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+}
+#checkbox-menu,
+.toggle{
+  display: none;
+}
+.menu{
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+.menu li a{
+  color: #030303;
+  text-decoration: none;
+  align-self: center;/* выравнивать текущие флекс элементы по флекс линии */
+  font-size: 13px;
+  padding: 13px;
+  transition: background .2s linear;
+}
+.menu li a:hover{
+  background: rgb(241, 213, 84);
+  border-radius: 3px;
+}
+.menu li a.logo{
+  font-size: 25px;
+  margin-right: 240px;
+}
+.menu li a.contacts{
+  
+  margin-right: 100px;
+}
+.wrapper{
+  position: relative;
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+}
+.intro{
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.intro-img{
+  
+  background-image: url("/media/media/img/room4.jpg");
+  width: 1100px;
+  height: 640px;
+  
+}
+.intro .intro-text{
+  
+  position: absolute;
+  font-size: 62px;
+  left: 0px;
+  top: 50px;
+  text-shadow: 1px 1px 5px rgb(226, 232, 233),
+             1px -1px 5px rgb(226, 232, 233),
+             -1px 1px 5px rgb(226, 232, 233),
+             -1px -1px 5px rgb(226, 232, 233);
+}
+.intro .intro-contacts{
+  background-color: #ffcc01;
+  max-width: 450px;
+  position: absolute;
+  top: 560px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+.intro-contacts i{
+  
+  color: #fff;
+  margin-right: 10px;
+}
+.intro-contacts p{
+  
+  font-size: 18px;
+  margin-right: 10px;
+  
+}
+
+
+
+.h1-text{
+  max-width: 1100px;
+  text-align: center;
+  font-size: 35px;
+}
+.main-img{
+  max-width: 1100px;
+  float: left;
+  border: 5px solid #ffffff;
+}
+.main{
+  display: center; 
+  min-height: 400px;
+  max-width: 1100px;
+  margin: 1% auto;
+  font-size: 20px;
+}
+#gallery{
+  max-width: 1100px;
+  display: center; 
+  padding: 1%;
+  margin: 1% auto;
+}
+#gallery:after {
+  max-width: 1100px;
+  word-spacing: 93px;
+  list-style-type: alpha;
+  margin: 1% auto;
+}
+#gallery li {
+  
+  display : inline-block;
+  max-width: 100%;
+  background: rgb(233, 233, 233);
+  vertical-align: top;
+  text-align: center;
+  margin: 1% auto;
+}
+#gallery img{
+  max-width: 100%;
+}
+}.wrapperer img{
+  max-width: 100%;
+  float: left;
+}
+.wrapperer{
+  display: center; 
+  min-height: 650px;
+  max-width: 1100px;
+  margin: 1% auto;
+  border: 5px solid #f55a13;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 765px){
+  .toggle{
+      clear: both;
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      line-height: 40px;
+      width: 100%;
+      color: #000;
+      background: rgb(241, 213, 84);
+      transition: all .1s linear;
+  }
+  .toggle:hover{
+      background: #d3a900;
+  }
+  #checkbox-menu:checked + label .touch li{
+      opacity: 1;
+      visibility: visible;
+      transition: all .7s linear;
+  }
+  #checkbox-menu:checked + label .touch{
+      height: 350px;
+  }
+  .menu{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 0;
+      transition: height .3s linear;
+  }
+  .menu li{
+      display: flex;
+      align-self: center;
+      width: 95%;
+      opacity: 0;
+      visibility: hidden;
+  }
+  .menu li a{
+      width: 95%;
+      text-align: center;
+      align-self: center;
+      align-content: center;
+  }
+  .menu li a.logo{
+      font-size: 21px;
+      margin-right: 0px;
+  }
+  .menu li a.contacts{
+      margin-right: 0px;
+  }
+  .intro{
+      margin-top: 0;
+      display: block;
+      max-width: 100%;
+  }
+  .intro-img{
+      background-position: bottom 50px right 570px;
+  }
+  .intro .intro-text{
+      position: relative;
+      font-size: 35px;
+      left: 10px;
+      top: 98px;
+  }
+  .intro .intro-contacts{
+      right: 0;
+      top: -55px;
+      padding: 20px 10px;
+      position: relative;
+  }
+  .intro-contacts i{
+      margin-right: 10px;
+  }
+  .intro-contacts p{
+      font-size: 13px;
+      margin-right: 0;
+  }
+  .h1-text{
+    display: block;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 35px;
+  }
+  
+  .main{
+    font-size: 20px;
+    
+  }
+  .main-img{
+    margin-left: 20;
+    width: 570;
+  }
+}
+/*////////////////////////////////////////////*/
+
+
+
+
+
+/*
+
+}
+
 .main img{
   max-width: 100%;
   float: left;
@@ -6,36 +269,31 @@
 .main{
   display: center center; 
   min-height: 300px;
-  /* max-height: 1170px; */
   max-width: 1170px;
   margin: 1% auto;
   font-size: 20px;
 
+
+
+
+
+
+
+
   
-}.wrapper img{
+}.wrapperer img{
   max-width: 100%;
   float: left;
 }
-.wrapper{
+.wrapperer{
   display: center; 
   min-height: 650px;
-  /* max-height: 1170px; */
   max-width: 1170px;
   margin: 1% auto;
   border: 5px solid #f55a13;
   font-size: 20px;
+}
 
-  /* text-align: center; */
-  
-}
-.child{
-  margin: 10px; /* Отступы вокруг */  
-}
-.item{
-
-  padding: 1px 0;
-  margin: 1px; /* Отступы вокруг */ 
-}
 
 
 
@@ -48,12 +306,7 @@ h1 {
 h3 {
   padding-left: 2px;
   color: #2f4f4f;}
-a {
-  padding-left: 2px;
-  color: SteelBlue;}
-body {
-  padding-left: 0px;
-  background-color: white;}
+
 article {
   padding-left: 3px;
   display: block;}
@@ -69,7 +322,6 @@ article {
   padding-left: 3px;
 }
 #head11 {
-  /* display : none; */
   padding-left: 2px;
   background-image: url("/media/media/img/logo.jpg");
   background-position: right top;
@@ -77,50 +329,20 @@ article {
   background-repeat: no-repeat;
 
 }
-#head12 {
-  /* фон для меню и главной надписи */
-  background-image: url("/media/media/img/banner1.png");
-  background-size: cover;
-}
+
 #head1 {
-  /* display : none; */
+
   color: #030303;
   font-size: 50px;
   font-family: "Times New Roman", Georgia, Serif;
-  
-  /* background-image: url("/media/media/img/banner1.png");
-  background-size: cover; */
   padding-left: 1px;
-
   position: relative;
-  /* background-position: center; */
-  /* color:rgb(17, 17, 17); */
   text-shadow: 1px 1px 5px rgb(226, 232, 233),
                1px -1px 5px rgb(226, 232, 233),
                -1px 1px 5px rgb(226, 232, 233),
                -1px -1px 5px rgb(226, 232, 233);
 }
-#loft {
-  padding-left: 1px;
-    /* width: 480px;
-    height: 510px; */
-    font-size: 14px;
-    /* height: 100px; */
-    /* background-color: rgb(245, 245, 245); */
-    padding: 5px;
-    display: inline-block;
-    /* position: relative; */
-    left: 10px;
-    text-align: left;
-  }
-div { 
-  /* position: center; */
-  padding-left: 0px;
-  }
-p{
-  
-  padding-left: 1px auto;
-}  
+ 
 #news img { 
   
   float: left;
@@ -128,113 +350,18 @@ p{
   margin: 0 10px 10px 0;
   
 }
-  #terrassa{
-    padding-left: 1px;
-    /* position: right; */
-    /* left: 10px; */
-    /* text-align: left; */
-  }
-#bb {
-    margin-left:0;
-    padding: 0;
-    /* padding-left: 1px; */
-  }
-#bb ul{
-  margin-left:0;
-  padding: 0;
-  padding-left: 15px;
-}
-#bb:after {
-  /* content: ' i i i i i i i i '; */
-  /* word-spacing: 93px; */
-  /* list-style-type: alpha; */
-  /* padding: 5px; */
-  padding-left: 0px;
-  margin-left:0;
-  
-            /* visibility: hidden; Скрыл это свойство, ради демонстрации процесса */
-}
-
-#bb li {
-
-  display : inline-block;
-  width : 380px;
-  height: 560px;
-  /* transform: translateX(1px); */
-  /* padding: 10px; */
-  /* margin: 1px; */
-  background: rgb(233, 233, 233);
-  vertical-align: top;
-  text-align: center;
-  margin-left:0;
-  padding-left: 0px;
- }
-
-            #navbar ul {
-              max-width: 100%;
-              display: block;
-              background-color: #f90;
-              position: absolute;
-              top: 100%;
-            }
-            #navbar li:hover ul { 
-              
-              display: block; }
-            #navbar, #navbar ul {
-              
-              margin: 0;
-              padding: 0;
-              list-style-type: none;
-            }
-            #navbar {
-              height: 30px;
-              /* background-image: url("/media/media/img/banner1.png"); */
-              /* background-color: #666; */
-              padding-left: 15px;
-              max-width: 100%;
-              
-            }
-            #navbar li {
-              float: left;
-              position: relative;
-              height: 100%;
-              
-            }
-            #navbar li a {
-              display: block;
-              padding: 6px;
-              max-width: 100%;
-              color: #fff;
-              text-decoration: none;
-              text-align: center;
-            }
-            #navbar ul li { float: none; }
-            #navbar li:hover { background-color: #f90; }
-            #navbar ul li:hover { background-color: #666; }
-/* gallery start */
 #gallery{
-  /* display: center;  */
-  
   padding: 1%;
   margin: 1% auto;
-    /* padding-left: 3px; */
 }
 #gallery:after {
-  /* content: ' i i i i i i i i '; */
   word-spacing: 93px;
   list-style-type: alpha;
-  /* padding-left: 0px; */
   margin: 1% auto;
-  
-  
-            /* visibility: hidden; Скрыл это свойство, ради демонстрации процесса */
-}
 #gallery li {
   
   display : inline-block;
   max-width: 100%;
-  /* padding-left: 0px; */
-  /* height: 510px; */
   background: rgb(233, 233, 233);
   vertical-align: top;
   text-align: center;
@@ -242,6 +369,5 @@ p{
 }
 #gallery img{
   max-width: 100%;
-  /* float: left; */
 }
-/* gallery end */
+*/
