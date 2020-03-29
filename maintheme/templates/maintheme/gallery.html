@@ -2,52 +2,55 @@
 
 {% block content %}
 
-        <p class="h1-text">Осекление таррас из алюминия и ПВХ</p>
-        <div>   
+        
+        <div class="main"> 
+            <p class="h1-text">Осекление таррас из алюминия и ПВХ</p>  
         <ul id="gallery">
                 {% for photo in photos.reverse %}
                 <li> {{ photo.photo_text}}<br>
-                    <img src="{{ photo.img.url }}", height="300", width="300">
+                    <img src="{{ photo.img.url }}">
                 </li>
                 {% endfor %}  
             </ul>
         </div>
-        <p class="h1-text">Безрамное остекление, стеклянные ограждения</p>
-        <div>
+        
+        <div class="main">
+            <p class="h1-text">Безрамное остекление, стеклянные ограждения</p>
             <ul id="gallery">
                 {% for photoframeless in photoframeless.reverse %}
                 <li> {{ photoframeless.PhotoFrameless_text}}<br>
-                    <img src="{{ photoframeless.img.url }}", height="300", >
+                    <img src="{{ photoframeless.img.url }}">
                 </li>
                 {% endfor %}  
             </ul>
         </div>
-        <p class="h1-text">Въездные ворота, калитки, автоматика</p>
-        <div>
+        <div class="main">
+            <p class="h1-text">Въездные ворота, калитки, автоматика</p>
             <ul id="gallery">
                 {% for x in gates.reverse %}
                 <li> {{ x.gate_text}}<br>
-                    <img src="{{ x.img.url }}", height="300", width="300">
+                    <img src="{{ x.img.url }}">
                 </li>
                 {% endfor %}  
             </ul>
         </div>
-        <p class="h1-text">Окна ПВХ, входные группы лоджии</p>
-        <div>
+        <div class="main">
+            <p class="h1-text">Окна ПВХ, входные группы лоджии</p>
             <ul id="gallery">
                 {% for d in pvcs.reverse %}
                 <li> {{ d.Pvc_text}}<br>
-                    <img src="{{ d.img.url }}", height="300", width="300">
+                    <img src="{{ d.img.url }}">
                 </li>
                 {% endfor %}  
             </ul>
         </div>
-        <p class="h1-text">Металлоконструкции, лестницы, стеллажи</p>
-        <div>
+        <div class="main">
+            <p class="h1-text">Металлоконструкции, лестницы, стеллажи</p>
             <ul id="gallery">
                 {% for c in metalls.reverse %}
                 <li> {{ c.metall_text}}<br>
-                    <img src="{{ c.img.url }}", height="300", width="300">
+                    <img src="{{ c.img.url }}"> 
+                    <!-- height="300" width="300"-->
                 </li>
                 {% endfor %}  
             </ul>
