@@ -23,3 +23,5 @@ def gallery(request):
     metalls = Metall.objects
     return render(request, 'maintheme/gallery.html', {'photos': photos, 'photoframeless' : photoframeless,
                                                       'gates': gates, 'pvcs': pvcs, 'metalls': metalls})
+def about_us(request):
+    return render(request, 'maintheme/about_us.html')

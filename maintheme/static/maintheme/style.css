@@ -121,6 +121,72 @@ nav{
   margin: 1% auto;
   font-size: 20px;
 }
+.stats{
+  display: flex;
+  margin-top: 130px;
+}
+.stats-line{
+  display: flex;
+}
+.stats-text{
+  padding-right: 40px;
+}
+.stats-text h2{
+  font-size: 40px;
+  margin-bottom: 70p;
+}
+.stats-text p{
+  margin-top: 50px;
+  font-size: 15px;
+  line-height: 27px;
+}
+.apartments{
+  background: #f6f5f4;
+  padding: 60px 0;
+}
+.apart h2{
+  margin-bottom: 85px;
+  font-size: 40px;
+}
+.card{
+  max-width: 348px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.card-container{
+  padding: 25px;
+}
+.card-info{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.card-info i{
+  margin-right: 8px;
+}
+.card-info span:first-child{
+  margin-right: 18px;
+}
+.card img{
+  max-width: 348px;
+  max-height: 379px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card:hover{
+  background: #fafaf9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8)
+}
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 366px);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 30px;
+}
+
 #gallery{
   max-width: 1100px;
   display: center; 

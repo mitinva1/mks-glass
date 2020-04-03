@@ -1,26 +1,19 @@
 {% extends "base.html" %}
 
-
 {% block content %}
-<body>
-    <main>
-        <section class="apartments">
-            <div class="wrapper apart">
-                <h2>Осекление таррас из алюминия и ПВХ</h2>  
-                <div class="cards">
-                    {% for photo in photos.reverse %}
-                    <div class="card">
-                        <div class="card-container">
-                            <p><i class="fas fa-store-alt"></i> {{ photo.photo_text}}</p>
-                        </div>    
-                        <img src="{{ photo.img.url }}">
-                                  
-                         
-                    </div>
-                    {% endfor %}          
-                </div>
-            </div>
-        </section>
+
+        
+        <div class="main"> 
+            <p class="h1-text">Осекление таррас из алюминия и ПВХ</p>  
+        <ul id="gallery">
+                {% for photo in photos.reverse %}
+                <li> {{ photo.photo_text}}<br>
+                    <img src="{{ photo.img.url }}">
+                </li>
+                {% endfor %}  
+            </ul>
+        </div>
+        
         <div class="main">
             <p class="h1-text">Безрамное остекление, стеклянные ограждения</p>
             <ul id="gallery">
@@ -62,6 +55,4 @@
                 {% endfor %}  
             </ul>
         </div>
-    </main>
-</body>
 {% endblock %}
