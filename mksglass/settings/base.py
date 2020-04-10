@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'gallery',
     "django_http2_push",#my
     'django.contrib.sites',
+    'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
